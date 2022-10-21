@@ -1,0 +1,4 @@
+/home/kalor/Workspace/roviexercises/RoViProject/SamplePlugin/build/CMakeFiles/RoViPlugin.dir
+/home/kalor/Workspace/roviexercises/RoViProject/SamplePlugin/build/CMakeFiles/edit_cache.dir
+/home/kalor/Workspace/roviexercises/RoViProject/SamplePlugin/build/CMakeFiles/rebuild_cache.dir
+/home/kalor/Workspace/roviexercises/RoViProject/SamplePlugin/build/CMakeFiles/RoViPlugin_autogen.dir
