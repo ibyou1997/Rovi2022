@@ -111,7 +111,7 @@ CMAKE_LINKER:FILEPATH=/usr/bin/ld
 //Path to a program.
 CMAKE_MAKE_PROGRAM:FILEPATH=/usr/bin/gmake
 
-CMAKE_MODULE_LINKER_FLAGS:STRING='                      '
+CMAKE_MODULE_LINKER_FLAGS:STRING='                                                                                                                                    '
 
 //Flags used by the linker during the creation of modules during
 // DEBUG builds.
@@ -153,7 +153,7 @@ CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
 //Path to a program.
 CMAKE_READELF:FILEPATH=/usr/bin/readelf
 
-CMAKE_SHARED_LINKER_FLAGS:STRING='                      '
+CMAKE_SHARED_LINKER_FLAGS:STRING='                                                                                                                                    '
 
 //Flags used by the linker during the creation of shared libraries
 // during DEBUG builds.
@@ -265,6 +265,9 @@ QT_ADDITIONAL_HOST_PACKAGES_PREFIX_PATH:STRING=
 //Additional directories where find(Qt6 ...) components are searched
 QT_ADDITIONAL_PACKAGES_PREFIX_PATH:STRING=
 
+//The directory containing a CMake configuration file for Qt6Charts.
+Qt6Charts_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt6Charts
+
 //The directory containing a CMake configuration file for Qt6CoreTools.
 Qt6CoreTools_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools
 
@@ -343,7 +346,7 @@ RoViPlugin_BINARY_DIR:STATIC=/home/rovi2022/Desktop/Project/build
 RoViPlugin_IS_TOP_LEVEL:STATIC=ON
 
 //Dependencies for the target
-RoViPlugin_LIB_DEPENDS:STATIC=general;RWS::sdurws_robworkstudioapp;general;RWS::sdurws_workcelleditor;general;RWS::sdurws;general;RWS::qtpropertybrowser;general;/usr/lib/x86_64-linux-gnu/libxerces-c.so;general;/usr/lib/x86_64-linux-gnu/libOpenGL.so;general;/usr/lib/x86_64-linux-gnu/libGLX.so;general;/usr/lib/x86_64-linux-gnu/libGLU.so;general;RW::yaobi;general;RW::pqp;general;RW::sdurw_csgjs;general;RW::sdurw_algorithms;general;RW::sdurw_pathplanners;general;RW::sdurw_pathoptimization;general;RW::sdurw_simulation;general;RW::sdurw_opengl;general;RW::sdurw_assembly;general;RW::sdurw_task;general;RW::sdurw_calibration;general;RW::sdurw_csg;general;RW::sdurw_control;general;RW::sdurw_proximitystrategies;general;RW::sdurw_core;general;RW::sdurw_common;general;RW::sdurw_math;general;RW::sdurw_plugin;general;RW::sdurw_kinematics;general;RW::sdurw_geometry;general;RW::sdurw_graphics;general;RW::sdurw_graspplanning;general;RW::sdurw_invkin;general;RW::sdurw_loaders;general;RW::sdurw_pathplanning;general;RW::sdurw_trajectory;general;RW::sdurw_sensor;general;RW::sdurw_models;general;RW::sdurw_proximity;general;RW::fcl;general;RW::ccd;general;RW::m;general;RW::octomap;general;RW::octomath;general;/usr/lib/x86_64-linux-gnu/libassimp.so;general;RW::dl;general;Boost::filesystem;general;Boost::system;general;Boost::thread;general;Boost::program_options;general;Boost::date_time;general;Qt6::Core;general;Qt6::Gui;general;Qt6::Widgets;general;Boost::serialization;general;/usr/lib/x86_64-linux-gnu/libglut.so;general;/usr/lib/x86_64-linux-gnu/libpython3.10.so;general;/usr/lib/x86_64-linux-gnu/libxerces-c.so;general;/usr/lib/x86_64-linux-gnu/libOpenGL.so;general;/usr/lib/x86_64-linux-gnu/libGLX.so;general;/usr/lib/x86_64-linux-gnu/libGLU.so;general;RW::yaobi;general;RW::pqp;general;RW::sdurw_csgjs;general;RW::sdurw_algorithms;general;RW::sdurw_pathplanners;general;RW::sdurw_pathoptimization;general;RW::sdurw_simulation;general;RW::sdurw_opengl;general;RW::sdurw_assembly;general;RW::sdurw_task;general;RW::sdurw_calibration;general;RW::sdurw_csg;general;RW::sdurw_control;general;RW::sdurw_proximitystrategies;general;RW::sdurw_core;general;RW::sdurw_common;general;RW::sdurw_math;general;RW::sdurw_plugin;general;RW::sdurw_kinematics;general;RW::sdurw_geometry;general;RW::sdurw_graphics;general;RW::sdurw_graspplanning;general;RW::sdurw_invkin;general;RW::sdurw_loaders;general;RW::sdurw_pathplanning;general;RW::sdurw_trajectory;general;RW::sdurw_sensor;general;RW::sdurw_models;general;RW::sdurw_proximity;general;RW::fcl;general;RW::ccd;general;RW::m;general;RW::octomap;general;RW::octomath;general;/usr/lib/x86_64-linux-gnu/libassimp.so;general;RW::dl;general;Boost::filesystem;general;Boost::system;general;Boost::thread;general;Boost::program_options;general;Boost::date_time;general;opencv_calib3d;general;opencv_core;general;opencv_dnn;general;opencv_features2d;general;opencv_flann;general;opencv_highgui;general;opencv_imgcodecs;general;opencv_imgproc;general;opencv_ml;general;opencv_objdetect;general;opencv_photo;general;opencv_stitching;general;opencv_video;general;opencv_videoio;general;opencv_alphamat;general;opencv_aruco;general;opencv_barcode;general;opencv_bgsegm;general;opencv_bioinspired;general;opencv_ccalib;general;opencv_datasets;general;opencv_dnn_objdetect;general;opencv_dnn_superres;general;opencv_dpm;general;opencv_face;general;opencv_freetype;general;opencv_fuzzy;general;opencv_hdf;general;opencv_hfs;general;opencv_img_hash;general;opencv_intensity_transform;general;opencv_line_descriptor;general;opencv_mcc;general;opencv_optflow;general;opencv_phase_unwrapping;general;opencv_plot;general;opencv_quality;general;opencv_rapid;general;opencv_reg;general;opencv_rgbd;general;opencv_saliency;general;opencv_shape;general;opencv_stereo;general;opencv_structured_light;general;opencv_superres;general;opencv_surface_matching;general;opencv_text;general;opencv_tracking;general;opencv_videostab;general;opencv_viz;general;opencv_wechat_qrcode;general;opencv_ximgproc;general;opencv_xobjdetect;general;opencv_xphoto;
+RoViPlugin_LIB_DEPENDS:STATIC=general;RWS::sdurws_robworkstudioapp;general;RWS::sdurws_workcelleditor;general;RWS::sdurws;general;RWS::qtpropertybrowser;general;/usr/lib/x86_64-linux-gnu/libxerces-c.so;general;/usr/lib/x86_64-linux-gnu/libOpenGL.so;general;/usr/lib/x86_64-linux-gnu/libGLX.so;general;/usr/lib/x86_64-linux-gnu/libGLU.so;general;RW::yaobi;general;RW::pqp;general;RW::sdurw_csgjs;general;RW::sdurw_algorithms;general;RW::sdurw_pathplanners;general;RW::sdurw_pathoptimization;general;RW::sdurw_simulation;general;RW::sdurw_opengl;general;RW::sdurw_assembly;general;RW::sdurw_task;general;RW::sdurw_calibration;general;RW::sdurw_csg;general;RW::sdurw_control;general;RW::sdurw_proximitystrategies;general;RW::sdurw_core;general;RW::sdurw_common;general;RW::sdurw_math;general;RW::sdurw_plugin;general;RW::sdurw_kinematics;general;RW::sdurw_geometry;general;RW::sdurw_graphics;general;RW::sdurw_graspplanning;general;RW::sdurw_invkin;general;RW::sdurw_loaders;general;RW::sdurw_pathplanning;general;RW::sdurw_trajectory;general;RW::sdurw_sensor;general;RW::sdurw_models;general;RW::sdurw_proximity;general;RW::fcl;general;RW::ccd;general;RW::m;general;RW::octomap;general;RW::octomath;general;/usr/lib/x86_64-linux-gnu/libassimp.so;general;RW::dl;general;Boost::filesystem;general;Boost::system;general;Boost::thread;general;Boost::program_options;general;Boost::date_time;general;Qt6::Core;general;Qt6::Gui;general;Qt6::Widgets;general;Boost::serialization;general;/usr/lib/x86_64-linux-gnu/libglut.so;general;/usr/lib/x86_64-linux-gnu/libpython3.10.so;general;/usr/lib/x86_64-linux-gnu/libxerces-c.so;general;/usr/lib/x86_64-linux-gnu/libOpenGL.so;general;/usr/lib/x86_64-linux-gnu/libGLX.so;general;/usr/lib/x86_64-linux-gnu/libGLU.so;general;RW::yaobi;general;RW::pqp;general;RW::sdurw_csgjs;general;RW::sdurw_algorithms;general;RW::sdurw_pathplanners;general;RW::sdurw_pathoptimization;general;RW::sdurw_simulation;general;RW::sdurw_opengl;general;RW::sdurw_assembly;general;RW::sdurw_task;general;RW::sdurw_calibration;general;RW::sdurw_csg;general;RW::sdurw_control;general;RW::sdurw_proximitystrategies;general;RW::sdurw_core;general;RW::sdurw_common;general;RW::sdurw_math;general;RW::sdurw_plugin;general;RW::sdurw_kinematics;general;RW::sdurw_geometry;general;RW::sdurw_graphics;general;RW::sdurw_graspplanning;general;RW::sdurw_invkin;general;RW::sdurw_loaders;general;RW::sdurw_pathplanning;general;RW::sdurw_trajectory;general;RW::sdurw_sensor;general;RW::sdurw_models;general;RW::sdurw_proximity;general;RW::fcl;general;RW::ccd;general;RW::m;general;RW::octomap;general;RW::octomath;general;/usr/lib/x86_64-linux-gnu/libassimp.so;general;RW::dl;general;Boost::filesystem;general;Boost::system;general;Boost::thread;general;Boost::program_options;general;Boost::date_time;general;opencv_calib3d;general;opencv_core;general;opencv_dnn;general;opencv_features2d;general;opencv_flann;general;opencv_highgui;general;opencv_imgcodecs;general;opencv_imgproc;general;opencv_ml;general;opencv_objdetect;general;opencv_photo;general;opencv_stitching;general;opencv_video;general;opencv_videoio;general;opencv_alphamat;general;opencv_aruco;general;opencv_barcode;general;opencv_bgsegm;general;opencv_bioinspired;general;opencv_ccalib;general;opencv_datasets;general;opencv_dnn_objdetect;general;opencv_dnn_superres;general;opencv_dpm;general;opencv_face;general;opencv_freetype;general;opencv_fuzzy;general;opencv_hdf;general;opencv_hfs;general;opencv_img_hash;general;opencv_intensity_transform;general;opencv_line_descriptor;general;opencv_mcc;general;opencv_optflow;general;opencv_phase_unwrapping;general;opencv_plot;general;opencv_quality;general;opencv_rapid;general;opencv_reg;general;opencv_rgbd;general;opencv_saliency;general;opencv_shape;general;opencv_stereo;general;opencv_structured_light;general;opencv_superres;general;opencv_surface_matching;general;opencv_text;general;opencv_tracking;general;opencv_videostab;general;opencv_viz;general;opencv_wechat_qrcode;general;opencv_ximgproc;general;opencv_xobjdetect;general;opencv_xphoto;general;Qt6::Core;general;Qt6::Widgets;general;Qt6::Charts;
 
 //Value Computed by CMake
 RoViPlugin_SOURCE_DIR:STATIC=/home/rovi2022/Desktop/Project/SamplePlugin
@@ -554,9 +557,9 @@ FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[/usr][v4.5.4(4)]
 //Details about finding OpenGL
 FIND_PACKAGE_MESSAGE_DETAILS_OpenGL:INTERNAL=[/usr/lib/x86_64-linux-gnu/libOpenGL.so][/usr/lib/x86_64-linux-gnu/libGLX.so][/usr/include][c ][v()]
 //Details about finding PythonInterp
-FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python3][v3.10.4(3)]
+FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python3][v3.10.6(3)]
 //Details about finding PythonLibs
-FIND_PACKAGE_MESSAGE_DETAILS_PythonLibs:INTERNAL=[/usr/lib/x86_64-linux-gnu/libpython3.10.so][/usr/include/python3.10][v3.10.4()]
+FIND_PACKAGE_MESSAGE_DETAILS_PythonLibs:INTERNAL=[/usr/lib/x86_64-linux-gnu/libpython3.10.so][/usr/include/python3.10][v3.10.6()]
 //Details about finding Qhull
 FIND_PACKAGE_MESSAGE_DETAILS_Qhull:INTERNAL=[/usr/lib/x86_64-linux-gnu/libqhull_r.so][/usr/include/libqhull_r;/usr/include][v()]
 //Details about finding RobWork
@@ -684,6 +687,24 @@ QT_FEATURE_calendarwidget:INTERNAL=ON
 QT_FEATURE_cborstreamreader:INTERNAL=ON
 //Qt feature: cborstreamwriter (from target Qt6::Core)
 QT_FEATURE_cborstreamwriter:INTERNAL=ON
+//Qt feature: charts_area_chart (from target Qt6::Charts)
+QT_FEATURE_charts_area_chart:INTERNAL=ON
+//Qt feature: charts_bar_chart (from target Qt6::Charts)
+QT_FEATURE_charts_bar_chart:INTERNAL=ON
+//Qt feature: charts_boxplot_chart (from target Qt6::Charts)
+QT_FEATURE_charts_boxplot_chart:INTERNAL=ON
+//Qt feature: charts_candlestick_chart (from target Qt6::Charts)
+QT_FEATURE_charts_candlestick_chart:INTERNAL=ON
+//Qt feature: charts_datetime_axis (from target Qt6::Charts)
+QT_FEATURE_charts_datetime_axis:INTERNAL=ON
+//Qt feature: charts_line_chart (from target Qt6::Charts)
+QT_FEATURE_charts_line_chart:INTERNAL=ON
+//Qt feature: charts_pie_chart (from target Qt6::Charts)
+QT_FEATURE_charts_pie_chart:INTERNAL=ON
+//Qt feature: charts_scatter_chart (from target Qt6::Charts)
+QT_FEATURE_charts_scatter_chart:INTERNAL=ON
+//Qt feature: charts_spline_chart (from target Qt6::Charts)
+QT_FEATURE_charts_spline_chart:INTERNAL=ON
 //Qt feature: checkbox (from target Qt6::Widgets)
 QT_FEATURE_checkbox:INTERNAL=ON
 //Qt feature: clipboard (from target Qt6::Gui)

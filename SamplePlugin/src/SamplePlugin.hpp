@@ -21,7 +21,7 @@
 
 // OpenCV 3
 #include <opencv2/opencv.hpp>
-
+#include <opencv2/rgbd/linemod.hpp>
 // Qt
 #include <QTimer>
 
@@ -36,6 +36,10 @@
 
 #include <functional>
 
+#include <QApplication>
+#include <QChartView>
+#include <QLineSeries>
+#include <QMainWindow>
 
 using namespace rw::common;
 using namespace rw::graphics;
@@ -102,7 +106,6 @@ private slots:
 	void printProjectionMatrix(std::string frameName);
 
     void GoToHomePostion();
-    void GrapTheBottel();
     int SavePathLoaderFile(std::string sFileName, std::vector< Q > vSolutions, double dSimultionTime = 0.01);
     std::vector<Q> CheckForColltion (std::vector<Q> vPossibleSoultion, bool bOneSoultion= true);
 
@@ -115,6 +118,37 @@ private slots:
 
     void CheckReachability();
     void GetStringGraspPostionAndObject(TargetObject eTargetObject, GraspPostion eGraspPostion);
+    void SetNewMountingPostionAndNewHomePos();
+
+
+
+    void VisionM4();
+    
+
+    cv::linemod::Detector createLinemodDetector();
+    cv::linemod::Match linemod(cv::Mat camera_img, const std::string object_name);
+    cv::Rect autocrop(cv::Mat &src);
+    bool isBorder(cv::Mat &edge, cv::Vec3b color);
+
+
+    void ReadHomorgraphyFile(vector<Point2d>& vMatching,vector<Point2d>& vCordi);
+    void GenerateHomoPoints();
+    cv::Mat TakeImage(bool bLeft = true);
+    cv::Mat FilterTheObjectFromTheBackground(cv::Mat img,bool bGenrate = false );
+    cv::Mat DrawCircleAtEstimatedPOs(cv::Mat img, double x, double y);
+
+
+    Eigen::Matrix<double, 4, 4>  ReadHomogenousTransTemplate(std::string sFileId);
+
+
+
+    TimedStatePath linInterp (Device::Ptr device, State state, Q from, Q passing1, Q passing2, Q passing3, Q passing4, Q passing5, Q to, double duration);
+    TimedStatePath InterpParabolic (Device::Ptr device, State state, Q from, Q passing1, Q passing2, Q passing3, Q passing4, Q passing5, Q to, double duration);
+    void ExecutePointTopointPlanner();
+    void ExecuteParabolic();
+    void WriteTrajectoryFile(std::string sFileName, vector <Q> qValue, vector <double> time);
+    
+
 
 private:
     static cv::Mat toOpenCVImage(const rw::sensor::Image& img);
@@ -142,6 +176,8 @@ private:
     std::string  m_sTargetName;
     TargetObject m_eTargetObject;
     GraspPostion m_eGraspPostion;
+
+    Eigen::Matrix<double, 4, 4> m_Extrinisic;
     int _step;
 
 };

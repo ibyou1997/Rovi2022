@@ -215,13 +215,7 @@ libRoViPlugin.so: /usr/lib/x86_64-linux-gnu/libopencv_viz.so.4.5.4d
 libRoViPlugin.so: /usr/lib/x86_64-linux-gnu/libopencv_wechat_qrcode.so.4.5.4d
 libRoViPlugin.so: /usr/lib/x86_64-linux-gnu/libopencv_xobjdetect.so.4.5.4d
 libRoViPlugin.so: /usr/lib/x86_64-linux-gnu/libopencv_xphoto.so.4.5.4d
-libRoViPlugin.so: /usr/lib/x86_64-linux-gnu/libQt6OpenGLWidgets.so.6.2.4
-libRoViPlugin.so: /usr/lib/x86_64-linux-gnu/libQt6OpenGL.so.6.2.4
-libRoViPlugin.so: /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.2.4
-libRoViPlugin.so: /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.2.4
-libRoViPlugin.so: /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.2.4
-libRoViPlugin.so: /usr/lib/x86_64-linux-gnu/libGLX.so
-libRoViPlugin.so: /usr/lib/x86_64-linux-gnu/libOpenGL.so
+libRoViPlugin.so: /usr/lib/x86_64-linux-gnu/libQt6Charts.so.6.2.4
 libRoViPlugin.so: /home/rovi2022/Programs/RobWork/Build/RW/libs/relwithdebinfo/libsdurw_algorithms.so
 libRoViPlugin.so: /home/rovi2022/Programs/RobWork/Build/RW/libs/relwithdebinfo/libpqp.a
 libRoViPlugin.so: /home/rovi2022/Programs/RobWork/Build/RW/libs/relwithdebinfo/libsdurw_graphics.so
@@ -268,6 +262,13 @@ libRoViPlugin.so: /usr/lib/x86_64-linux-gnu/libopencv_flann.so.4.5.4d
 libRoViPlugin.so: /usr/lib/x86_64-linux-gnu/libopencv_photo.so.4.5.4d
 libRoViPlugin.so: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.5.4d
 libRoViPlugin.so: /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.5.4d
+libRoViPlugin.so: /usr/lib/x86_64-linux-gnu/libQt6OpenGLWidgets.so.6.2.4
+libRoViPlugin.so: /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.2.4
+libRoViPlugin.so: /usr/lib/x86_64-linux-gnu/libQt6OpenGL.so.6.2.4
+libRoViPlugin.so: /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.2.4
+libRoViPlugin.so: /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.2.4
+libRoViPlugin.so: /usr/lib/x86_64-linux-gnu/libGLX.so
+libRoViPlugin.so: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 libRoViPlugin.so: CMakeFiles/RoViPlugin.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rovi2022/Desktop/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX shared module libRoViPlugin.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/RoViPlugin.dir/link.txt --verbose=$(VERBOSE)

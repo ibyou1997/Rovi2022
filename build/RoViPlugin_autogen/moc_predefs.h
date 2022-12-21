@@ -111,6 +111,7 @@
 #define __STDC_IEC_559__ 1
 #define __STDC_ISO_10646__ 201706L
 #define __UINT16_C(c) c
+#define QT_CHARTS_LIB 1
 #define __DECIMAL_DIG__ 21
 #define __STDC_IEC_559_COMPLEX__ 1
 #define __FLT64_EPSILON__ 2.22044604925031308084726333618164062e-16F64
@@ -207,7 +208,7 @@
 #define __DEC128_MAX__ 9.999999999999999999999999999999999E6144DL
 #define __FLT_MANT_DIG__ 24
 #define __LDBL_DECIMAL_DIG__ 21
-#define __VERSION__ "11.2.0"
+#define __VERSION__ "11.3.0"
 #define __UINT64_C(c) c ## UL
 #define __cpp_unicode_characters 201411L
 #define _STDC_PREDEF_H 1
@@ -409,7 +410,7 @@
 #define __DEC128_MAX_EXP__ 6145
 #define __FLT32X_HAS_QUIET_NAN__ 1
 #define __ATOMIC_CONSUME 1
-#define __GNUC_MINOR__ 2
+#define __GNUC_MINOR__ 3
 #define __GLIBCXX_TYPE_INT_N_0 __int128
 #define __INT_FAST16_WIDTH__ 64
 #define __UINTMAX_MAX__ 0xffffffffffffffffUL
