@@ -37,11 +37,12 @@ set(CMAKE_AUTORCC ON)
 # Need to add the current binary dir to the include directory because the generated source files are
 # placed here
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
+#add_subdirectory(matplotplusplus)
 
 # The shared library to build:
 add_library(${PROJECT_NAME} MODULE src/SamplePlugin.cpp src/resources.qrc)
 target_link_libraries(
     ${PROJECT_NAME} ${ROBWORKSTUDIO_LIBRARIES} ${ROBWORK_LIBRARIES} ${OpenCV_LIBS} ${Qt6Core_LIBRARIES}
-     ${Qt6Widgets_LIBRARIES} ${Qt6Charts_LIBRARIES}
+     ${Qt6Widgets_LIBRARIES} ${Qt6Charts_LIBRARIES} #matplot
      
 )

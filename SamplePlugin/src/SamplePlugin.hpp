@@ -143,7 +143,11 @@ private slots:
 
 
     TimedStatePath linInterp (Device::Ptr device, State state, Q from, Q passing1, Q passing2, Q passing3, Q passing4, Q passing5, Q to, double duration);
+    
     TimedStatePath InterpParabolic (Device::Ptr device, State state, Q from, Q passing1, Q passing2, Q passing3, Q passing4, Q passing5, Q to, double duration);
+    TimedStatePath InterTraj(Device::Ptr device, State state, InterpolatorTrajectory<Q> trajectory) ;
+
+
     void ExecutePointTopointPlanner();
     void ExecuteParabolic();
     void WriteTrajectoryFile(std::string sFileName, vector <Q> qValue, vector <double> time);

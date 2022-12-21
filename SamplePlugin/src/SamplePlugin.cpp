@@ -1389,6 +1389,16 @@ TimedStatePath SamplePlugin::linInterp(Device::Ptr device, State state, Q from, 
     return res;
 }
 
+TimedStatePath SamplePlugin::InterTraj(Device::Ptr device, State state, InterpolatorTrajectory<Q> trajectory){
+    TimedStatePath motion;
+    for (double i = 0; i < trajectory.duration(); i++)
+    {
+       device->setQ(trajectory.x(i),state);
+       motion.push_back(TimedState(i,state));
+    }
+    return motion;
+}
+//#include <matplot/matplot.h>
 TimedStatePath SamplePlugin::InterpParabolic(Device::Ptr device, State state, Q from, Q passing1, Q passing2, Q passing3, Q passing4, Q passing5, Q to, double duration)
 {
 
@@ -1407,45 +1417,70 @@ TimedStatePath SamplePlugin::InterpParabolic(Device::Ptr device, State state, Q 
     ParabolicBlend<Q> para3(interp3, interp4, duration);
     ParabolicBlend<Q> para4(interp4, interp5, duration);
     ParabolicBlend<Q> para5(interp5, interp6, duration);
-    //ParabolicBlend<Q> para6(interp6, interp7, duration);
 
-    for (double i = 0; i < duration; i += 0.05)
-    {
-        device->setQ(para1.x(i), state);
-        res_para.push_back(TimedState(i, state));
-    }
+    InterpolatorTrajectory<Q> blend;
+    blend.add(interp1);
+    blend.add(para1, interp2);
+    blend.add(para2, interp3);
+    blend.add(para3, interp4);
+    blend.add(para4, interp5);
+    blend.add(para5, interp6);
 
-    for (double i = 0; i < duration; i += 0.05)
-    {
-        device->setQ(para2.x(i), state);
-        res_para.push_back(TimedState(i, state));
-    }
+    // point to point Ramp
 
-    for (double i = 0; i < duration; i += 0.05)
-    {
-        device->setQ(para3.x(i), state);
-        res_para.push_back(TimedState(i, state));
-    }
+    Q velocity_limit = _device->getVelocityLimits();
+    Q acc_limit = _device->getVelocityLimits();
+    std::cout << "vel limiy" << velocity_limit << std::endl;
 
-    for (double i = 0; i < duration; i += 0.05)
-    {
-        device->setQ(para4.x(i), state);
-        res_para.push_back(TimedState(i, state));
-    }
+    RampInterpolator<Q> ramp1(from, passing1, velocity_limit, acc_limit, duration);
+    RampInterpolator<Q> ramp2(passing1, passing2, velocity_limit, acc_limit, duration);
+    RampInterpolator<Q> ramp3(passing2, passing3, velocity_limit, acc_limit, duration);
+    RampInterpolator<Q> ramp4(passing3, passing4, velocity_limit, acc_limit, duration);
+    RampInterpolator<Q> ramp5(passing4, passing5, velocity_limit, acc_limit, duration);
+    RampInterpolator<Q> ramp6(passing5, to, velocity_limit, acc_limit, duration);
 
-    for (double i = 0; i < duration; i += 0.05)
-    {
-        device->setQ(para5.x(i), state);
-        res_para.push_back(TimedState(i, state));
-    }
+    InterpolatorTrajectory<Q> blend_ramp;
+    blend_ramp.add(ramp1);
+    blend_ramp.add(ramp2);
+    blend_ramp.add(ramp3);
+    blend_ramp.add(ramp4);
+    blend_ramp.add(ramp5);
+    blend_ramp.add(ramp6);
 
-    for (double i = 0; i < duration; i += 0.05)
-    {
-        device->setQ(interp6.x(i), state);
-        res_para.push_back(TimedState(i, state));
-    }
+    // Ramp blend
 
-    return res_para;
+    ParabolicBlend<Q> ramp_blend1(LinearInterpolator<Q>(ramp1.getStart(),ramp1.getEnd(), duration)
+    ,LinearInterpolator<Q>(ramp2.getStart(),ramp2.getEnd(), duration), duration);
+
+     ParabolicBlend<Q> ramp_blend2(LinearInterpolator<Q>(ramp2.getStart(),ramp2.getEnd(), duration)
+    ,LinearInterpolator<Q>(ramp3.getStart(),ramp3.getEnd(), duration), duration);
+
+     ParabolicBlend<Q> ramp_blend3(LinearInterpolator<Q>(ramp3.getStart(),ramp3.getEnd(), duration)
+    ,LinearInterpolator<Q>(ramp4.getStart(),ramp4.getEnd(), duration), duration);
+
+    ParabolicBlend<Q> ramp_blend4(LinearInterpolator<Q>(ramp4.getStart(),ramp4.getEnd(), duration)
+    ,LinearInterpolator<Q>(ramp5.getStart(),ramp5.getEnd(), duration), duration);
+
+    ParabolicBlend<Q> ramp_blend5(LinearInterpolator<Q>(ramp5.getStart(),ramp5.getEnd(), duration)
+    ,LinearInterpolator<Q>(ramp6.getStart(),ramp6.getEnd(), duration), duration);
+
+    InterpolatorTrajectory<Q> p_blend_ramp;
+
+    p_blend_ramp.add(ramp1);
+    p_blend_ramp.add(ramp_blend1, ramp2);
+    p_blend_ramp.add(ramp_blend2, ramp3);
+    p_blend_ramp.add(ramp_blend3, ramp4);
+    p_blend_ramp.add(ramp_blend4, ramp5);
+    p_blend_ramp.add(ramp_blend5, ramp6);
+
+    TimedStatePath timedpath;
+    timedpath = InterTraj(device, state, blend);
+    //PathLoader::storeTimedStatePath(*_wc, timedpath, "/home/rovi2022/Desktop/Project/Planing/blend_test.rwplay");
+  
+
+    
+    return timedpath;
+    
 }
 
 
@@ -1595,7 +1630,7 @@ void SamplePlugin::ExecuteParabolic()
 
 
     
-    for (unsigned int itpick = 0; itpick < 3; itpick++)
+    for (unsigned int itpick = 0; itpick < 1; itpick++)
     {
         Q middle;
         
@@ -1619,7 +1654,7 @@ void SamplePlugin::ExecuteParabolic()
         default:
             break;
         }
-        for (unsigned int itTest = 0; itTest < 50; itTest++)
+        for (unsigned int itTest = 0; itTest < 1; itTest++)
         {
              auto start_timer = std::chrono::high_resolution_clock::now();
             TimedStatePath parabolicQMotion = InterpParabolic(_device, m_RobotState, start, passing1, passing2, middle, passing3, passing4, end, 1);
@@ -1652,6 +1687,6 @@ void SamplePlugin::ExecuteParabolic()
         time.push_back(path[i].getTime());
     }
 
-    std::string sHomFile = "/home/rovi2022/Desktop/Project/Planing/parabolic.txt";
+    std::string sHomFile = "/home/rovi2022/Desktop/Project/Planing/parabolic.txt ";
     WriteTrajectoryFile(sHomFile, qValue, time);
 }

@@ -23,8 +23,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_SamplePlugin_t {
-    const uint offsetsAndSize[202];
-    char stringdata0[1277];
+    const uint offsetsAndSize[208];
+    char stringdata0[1324];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(offsetof(qt_meta_stringdata_SamplePlugin_t, stringdata0) + ofs), len 
@@ -124,13 +124,16 @@ QT_MOC_LITERAL(1133, 8), // "passing4"
 QT_MOC_LITERAL(1142, 8), // "passing5"
 QT_MOC_LITERAL(1151, 8), // "duration"
 QT_MOC_LITERAL(1160, 15), // "InterpParabolic"
-QT_MOC_LITERAL(1176, 26), // "ExecutePointTopointPlanner"
-QT_MOC_LITERAL(1203, 16), // "ExecuteParabolic"
-QT_MOC_LITERAL(1220, 19), // "WriteTrajectoryFile"
-QT_MOC_LITERAL(1240, 9), // "vector<Q>"
-QT_MOC_LITERAL(1250, 6), // "qValue"
-QT_MOC_LITERAL(1257, 14), // "vector<double>"
-QT_MOC_LITERAL(1272, 4) // "time"
+QT_MOC_LITERAL(1176, 9), // "InterTraj"
+QT_MOC_LITERAL(1186, 25), // "InterpolatorTrajectory<Q>"
+QT_MOC_LITERAL(1212, 10), // "trajectory"
+QT_MOC_LITERAL(1223, 26), // "ExecutePointTopointPlanner"
+QT_MOC_LITERAL(1250, 16), // "ExecuteParabolic"
+QT_MOC_LITERAL(1267, 19), // "WriteTrajectoryFile"
+QT_MOC_LITERAL(1287, 9), // "vector<Q>"
+QT_MOC_LITERAL(1297, 6), // "qValue"
+QT_MOC_LITERAL(1304, 14), // "vector<double>"
+QT_MOC_LITERAL(1319, 4) // "time"
 
     },
     "SamplePlugin\0btnPressed\0\0timer\0getImage\0"
@@ -164,7 +167,8 @@ QT_MOC_LITERAL(1272, 4) // "time"
     "Eigen::Matrix<double,4,4>\0sFileId\0"
     "linInterp\0TimedStatePath\0passing1\0"
     "passing2\0passing3\0passing4\0passing5\0"
-    "duration\0InterpParabolic\0"
+    "duration\0InterpParabolic\0InterTraj\0"
+    "InterpolatorTrajectory<Q>\0trajectory\0"
     "ExecutePointTopointPlanner\0ExecuteParabolic\0"
     "WriteTrajectoryFile\0vector<Q>\0qValue\0"
     "vector<double>\0time"
@@ -177,7 +181,7 @@ static const uint qt_meta_data_SamplePlugin[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-      38,   14, // methods
+      39,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -185,44 +189,45 @@ static const uint qt_meta_data_SamplePlugin[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,  242,    2, 0x08,    1 /* Private */,
-       3,    0,  243,    2, 0x08,    2 /* Private */,
-       4,    0,  244,    2, 0x08,    3 /* Private */,
-       5,    0,  245,    2, 0x08,    4 /* Private */,
-       6,    1,  246,    2, 0x08,    5 /* Private */,
-       9,    4,  249,    2, 0x08,    7 /* Private */,
-      17,    4,  258,    2, 0x08,   12 /* Private */,
-      22,    1,  267,    2, 0x08,   17 /* Private */,
-      25,    0,  270,    2, 0x08,   19 /* Private */,
-      26,    3,  271,    2, 0x08,   20 /* Private */,
-      26,    2,  278,    2, 0x28,   24 /* Private | MethodCloned */,
-      31,    2,  283,    2, 0x08,   27 /* Private */,
-      31,    1,  288,    2, 0x28,   30 /* Private | MethodCloned */,
-      34,    0,  291,    2, 0x08,   32 /* Private */,
-      35,    0,  292,    2, 0x08,   33 /* Private */,
-      36,    2,  293,    2, 0x08,   34 /* Private */,
-      40,    5,  298,    2, 0x08,   37 /* Private */,
-      48,    0,  309,    2, 0x08,   43 /* Private */,
-      49,    2,  310,    2, 0x08,   44 /* Private */,
-      52,    0,  315,    2, 0x08,   47 /* Private */,
-      53,    0,  316,    2, 0x08,   48 /* Private */,
-      54,    0,  317,    2, 0x08,   49 /* Private */,
-      56,    2,  318,    2, 0x08,   50 /* Private */,
-      61,    1,  323,    2, 0x08,   53 /* Private */,
-      65,    2,  326,    2, 0x08,   55 /* Private */,
-      69,    2,  331,    2, 0x08,   58 /* Private */,
-      73,    0,  336,    2, 0x08,   61 /* Private */,
-      74,    1,  337,    2, 0x08,   62 /* Private */,
-      74,    0,  340,    2, 0x28,   64 /* Private | MethodCloned */,
-      76,    2,  341,    2, 0x08,   65 /* Private */,
-      76,    1,  346,    2, 0x28,   68 /* Private | MethodCloned */,
-      79,    3,  349,    2, 0x08,   70 /* Private */,
-      82,    1,  356,    2, 0x08,   74 /* Private */,
-      85,   10,  359,    2, 0x08,   76 /* Private */,
-      93,   10,  380,    2, 0x08,   87 /* Private */,
-      94,    0,  401,    2, 0x08,   98 /* Private */,
-      95,    0,  402,    2, 0x08,   99 /* Private */,
-      96,    3,  403,    2, 0x08,  100 /* Private */,
+       1,    0,  248,    2, 0x08,    1 /* Private */,
+       3,    0,  249,    2, 0x08,    2 /* Private */,
+       4,    0,  250,    2, 0x08,    3 /* Private */,
+       5,    0,  251,    2, 0x08,    4 /* Private */,
+       6,    1,  252,    2, 0x08,    5 /* Private */,
+       9,    4,  255,    2, 0x08,    7 /* Private */,
+      17,    4,  264,    2, 0x08,   12 /* Private */,
+      22,    1,  273,    2, 0x08,   17 /* Private */,
+      25,    0,  276,    2, 0x08,   19 /* Private */,
+      26,    3,  277,    2, 0x08,   20 /* Private */,
+      26,    2,  284,    2, 0x28,   24 /* Private | MethodCloned */,
+      31,    2,  289,    2, 0x08,   27 /* Private */,
+      31,    1,  294,    2, 0x28,   30 /* Private | MethodCloned */,
+      34,    0,  297,    2, 0x08,   32 /* Private */,
+      35,    0,  298,    2, 0x08,   33 /* Private */,
+      36,    2,  299,    2, 0x08,   34 /* Private */,
+      40,    5,  304,    2, 0x08,   37 /* Private */,
+      48,    0,  315,    2, 0x08,   43 /* Private */,
+      49,    2,  316,    2, 0x08,   44 /* Private */,
+      52,    0,  321,    2, 0x08,   47 /* Private */,
+      53,    0,  322,    2, 0x08,   48 /* Private */,
+      54,    0,  323,    2, 0x08,   49 /* Private */,
+      56,    2,  324,    2, 0x08,   50 /* Private */,
+      61,    1,  329,    2, 0x08,   53 /* Private */,
+      65,    2,  332,    2, 0x08,   55 /* Private */,
+      69,    2,  337,    2, 0x08,   58 /* Private */,
+      73,    0,  342,    2, 0x08,   61 /* Private */,
+      74,    1,  343,    2, 0x08,   62 /* Private */,
+      74,    0,  346,    2, 0x28,   64 /* Private | MethodCloned */,
+      76,    2,  347,    2, 0x08,   65 /* Private */,
+      76,    1,  352,    2, 0x28,   68 /* Private | MethodCloned */,
+      79,    3,  355,    2, 0x08,   70 /* Private */,
+      82,    1,  362,    2, 0x08,   74 /* Private */,
+      85,   10,  365,    2, 0x08,   76 /* Private */,
+      93,   10,  386,    2, 0x08,   87 /* Private */,
+      94,    3,  407,    2, 0x08,   98 /* Private */,
+      97,    0,  414,    2, 0x08,  102 /* Private */,
+      98,    0,  415,    2, 0x08,  103 /* Private */,
+      99,    3,  416,    2, 0x08,  104 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -260,9 +265,10 @@ static const uint qt_meta_data_SamplePlugin[] = {
     0x80000000 | 83, 0x80000000 | 23,   84,
     0x80000000 | 86, 0x80000000 | 10, 0x80000000 | 12, 0x80000000 | 15, 0x80000000 | 15, 0x80000000 | 15, 0x80000000 | 15, 0x80000000 | 15, 0x80000000 | 15, 0x80000000 | 15, QMetaType::Double,   11,    8,   18,   87,   88,   89,   90,   91,   19,   92,
     0x80000000 | 86, 0x80000000 | 10, 0x80000000 | 12, 0x80000000 | 15, 0x80000000 | 15, 0x80000000 | 15, 0x80000000 | 15, 0x80000000 | 15, 0x80000000 | 15, 0x80000000 | 15, QMetaType::Double,   11,    8,   18,   87,   88,   89,   90,   91,   19,   92,
+    0x80000000 | 86, 0x80000000 | 10, 0x80000000 | 12, 0x80000000 | 95,   11,    8,   96,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, 0x80000000 | 23, 0x80000000 | 97, 0x80000000 | 99,   27,   98,  100,
+    QMetaType::Void, 0x80000000 | 23, 0x80000000 | 100, 0x80000000 | 102,   27,  101,  103,
 
        0        // eod
 };
@@ -326,9 +332,11 @@ void SamplePlugin::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
             if (_a[0]) *reinterpret_cast< TimedStatePath*>(_a[0]) = std::move(_r); }  break;
         case 34: { TimedStatePath _r = _t->InterpParabolic((*reinterpret_cast< std::add_pointer_t<Device::Ptr>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<State>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<Q>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<Q>>(_a[4])),(*reinterpret_cast< std::add_pointer_t<Q>>(_a[5])),(*reinterpret_cast< std::add_pointer_t<Q>>(_a[6])),(*reinterpret_cast< std::add_pointer_t<Q>>(_a[7])),(*reinterpret_cast< std::add_pointer_t<Q>>(_a[8])),(*reinterpret_cast< std::add_pointer_t<Q>>(_a[9])),(*reinterpret_cast< std::add_pointer_t<double>>(_a[10])));
             if (_a[0]) *reinterpret_cast< TimedStatePath*>(_a[0]) = std::move(_r); }  break;
-        case 35: _t->ExecutePointTopointPlanner(); break;
-        case 36: _t->ExecuteParabolic(); break;
-        case 37: _t->WriteTrajectoryFile((*reinterpret_cast< std::add_pointer_t<std::string>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<vector<Q>>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<vector<double>>>(_a[3]))); break;
+        case 35: { TimedStatePath _r = _t->InterTraj((*reinterpret_cast< std::add_pointer_t<Device::Ptr>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<State>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<InterpolatorTrajectory<Q>>>(_a[3])));
+            if (_a[0]) *reinterpret_cast< TimedStatePath*>(_a[0]) = std::move(_r); }  break;
+        case 36: _t->ExecutePointTopointPlanner(); break;
+        case 37: _t->ExecuteParabolic(); break;
+        case 38: _t->WriteTrajectoryFile((*reinterpret_cast< std::add_pointer_t<std::string>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<vector<Q>>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<vector<double>>>(_a[3]))); break;
         default: ;
         }
     }
@@ -342,7 +350,7 @@ const QMetaObject SamplePlugin::staticMetaObject = { {
     nullptr,
 qt_incomplete_metaTypeArray<qt_meta_stringdata_SamplePlugin_t
 , QtPrivate::TypeAndForceComplete<SamplePlugin, std::true_type>
-, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const rw::kinematics::State &, std::false_type>, QtPrivate::TypeAndForceComplete<bool, std::false_type>, QtPrivate::TypeAndForceComplete<Device::Ptr, std::false_type>, QtPrivate::TypeAndForceComplete<const State &, std::false_type>, QtPrivate::TypeAndForceComplete<const CollisionDetector &, std::false_type>, QtPrivate::TypeAndForceComplete<const Q &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<Q, std::false_type>, QtPrivate::TypeAndForceComplete<Q, std::false_type>, QtPrivate::TypeAndForceComplete<double, std::false_type>, QtPrivate::TypeAndForceComplete<double, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<std::string, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<std::string, std::false_type>, QtPrivate::TypeAndForceComplete<std::vector<Q>, std::false_type>, QtPrivate::TypeAndForceComplete<double, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<std::string, std::false_type>, QtPrivate::TypeAndForceComplete<std::vector<Q>, std::false_type>, QtPrivate::TypeAndForceComplete<std::vector<Q>, std::false_type>, QtPrivate::TypeAndForceComplete<std::vector<Q>, std::false_type>, QtPrivate::TypeAndForceComplete<bool, std::false_type>, QtPrivate::TypeAndForceComplete<std::vector<Q>, std::false_type>, QtPrivate::TypeAndForceComplete<std::vector<Q>, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<TargetObject, std::false_type>, QtPrivate::TypeAndForceComplete<bool, std::false_type>, QtPrivate::TypeAndForceComplete<std::vector<Q>, std::false_type>, QtPrivate::TypeAndForceComplete<const std::string, std::false_type>, QtPrivate::TypeAndForceComplete<const std::string, std::false_type>, QtPrivate::TypeAndForceComplete<rw::models::SerialDevice::Ptr, std::false_type>, QtPrivate::TypeAndForceComplete<rw::models::WorkCell::Ptr, std::false_type>, QtPrivate::TypeAndForceComplete<State &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<TargetObject, std::false_type>, QtPrivate::TypeAndForceComplete<GraspPostion, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<cv::linemod::Detector, std::false_type>, QtPrivate::TypeAndForceComplete<cv::linemod::Match, std::false_type>, QtPrivate::TypeAndForceComplete<cv::Mat, std::false_type>, QtPrivate::TypeAndForceComplete<const std::string, std::false_type>, QtPrivate::TypeAndForceComplete<cv::Rect, std::false_type>, QtPrivate::TypeAndForceComplete<cv::Mat &, std::false_type>, QtPrivate::TypeAndForceComplete<bool, std::false_type>, QtPrivate::TypeAndForceComplete<cv::Mat &, std::false_type>, QtPrivate::TypeAndForceComplete<cv::Vec3b, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<vector<Point2d> &, std::false_type>, QtPrivate::TypeAndForceComplete<vector<Point2d> &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<cv::Mat, std::false_type>, QtPrivate::TypeAndForceComplete<bool, std::false_type>, QtPrivate::TypeAndForceComplete<cv::Mat, std::false_type>, QtPrivate::TypeAndForceComplete<cv::Mat, std::false_type>, QtPrivate::TypeAndForceComplete<cv::Mat, std::false_type>, QtPrivate::TypeAndForceComplete<bool, std::false_type>, QtPrivate::TypeAndForceComplete<cv::Mat, std::false_type>, QtPrivate::TypeAndForceComplete<cv::Mat, std::false_type>, QtPrivate::TypeAndForceComplete<cv::Mat, std::false_type>, QtPrivate::TypeAndForceComplete<cv::Mat, std::false_type>, QtPrivate::TypeAndForceComplete<double, std::false_type>, QtPrivate::TypeAndForceComplete<double, std::false_type>, QtPrivate::TypeAndForceComplete<Eigen::Matrix<double,4,4>, std::false_type>, QtPrivate::TypeAndForceComplete<std::string, std::false_type>, QtPrivate::TypeAndForceComplete<TimedStatePath, std::false_type>, QtPrivate::TypeAndForceComplete<Device::Ptr, std::false_type>, QtPrivate::TypeAndForceComplete<State, std::false_type>, QtPrivate::TypeAndForceComplete<Q, std::false_type>, QtPrivate::TypeAndForceComplete<Q, std::false_type>, QtPrivate::TypeAndForceComplete<Q, std::false_type>, QtPrivate::TypeAndForceComplete<Q, std::false_type>, QtPrivate::TypeAndForceComplete<Q, std::false_type>, QtPrivate::TypeAndForceComplete<Q, std::false_type>, QtPrivate::TypeAndForceComplete<Q, std::false_type>, QtPrivate::TypeAndForceComplete<double, std::false_type>, QtPrivate::TypeAndForceComplete<TimedStatePath, std::false_type>, QtPrivate::TypeAndForceComplete<Device::Ptr, std::false_type>, QtPrivate::TypeAndForceComplete<State, std::false_type>, QtPrivate::TypeAndForceComplete<Q, std::false_type>, QtPrivate::TypeAndForceComplete<Q, std::false_type>, QtPrivate::TypeAndForceComplete<Q, std::false_type>, QtPrivate::TypeAndForceComplete<Q, std::false_type>, QtPrivate::TypeAndForceComplete<Q, std::false_type>, QtPrivate::TypeAndForceComplete<Q, std::false_type>, QtPrivate::TypeAndForceComplete<Q, std::false_type>, QtPrivate::TypeAndForceComplete<double, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<std::string, std::false_type>, QtPrivate::TypeAndForceComplete<vector<Q>, std::false_type>, QtPrivate::TypeAndForceComplete<vector<double>, std::false_type>
+, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const rw::kinematics::State &, std::false_type>, QtPrivate::TypeAndForceComplete<bool, std::false_type>, QtPrivate::TypeAndForceComplete<Device::Ptr, std::false_type>, QtPrivate::TypeAndForceComplete<const State &, std::false_type>, QtPrivate::TypeAndForceComplete<const CollisionDetector &, std::false_type>, QtPrivate::TypeAndForceComplete<const Q &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<Q, std::false_type>, QtPrivate::TypeAndForceComplete<Q, std::false_type>, QtPrivate::TypeAndForceComplete<double, std::false_type>, QtPrivate::TypeAndForceComplete<double, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<std::string, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<std::string, std::false_type>, QtPrivate::TypeAndForceComplete<std::vector<Q>, std::false_type>, QtPrivate::TypeAndForceComplete<double, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<std::string, std::false_type>, QtPrivate::TypeAndForceComplete<std::vector<Q>, std::false_type>, QtPrivate::TypeAndForceComplete<std::vector<Q>, std::false_type>, QtPrivate::TypeAndForceComplete<std::vector<Q>, std::false_type>, QtPrivate::TypeAndForceComplete<bool, std::false_type>, QtPrivate::TypeAndForceComplete<std::vector<Q>, std::false_type>, QtPrivate::TypeAndForceComplete<std::vector<Q>, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<TargetObject, std::false_type>, QtPrivate::TypeAndForceComplete<bool, std::false_type>, QtPrivate::TypeAndForceComplete<std::vector<Q>, std::false_type>, QtPrivate::TypeAndForceComplete<const std::string, std::false_type>, QtPrivate::TypeAndForceComplete<const std::string, std::false_type>, QtPrivate::TypeAndForceComplete<rw::models::SerialDevice::Ptr, std::false_type>, QtPrivate::TypeAndForceComplete<rw::models::WorkCell::Ptr, std::false_type>, QtPrivate::TypeAndForceComplete<State &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<TargetObject, std::false_type>, QtPrivate::TypeAndForceComplete<GraspPostion, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<cv::linemod::Detector, std::false_type>, QtPrivate::TypeAndForceComplete<cv::linemod::Match, std::false_type>, QtPrivate::TypeAndForceComplete<cv::Mat, std::false_type>, QtPrivate::TypeAndForceComplete<const std::string, std::false_type>, QtPrivate::TypeAndForceComplete<cv::Rect, std::false_type>, QtPrivate::TypeAndForceComplete<cv::Mat &, std::false_type>, QtPrivate::TypeAndForceComplete<bool, std::false_type>, QtPrivate::TypeAndForceComplete<cv::Mat &, std::false_type>, QtPrivate::TypeAndForceComplete<cv::Vec3b, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<vector<Point2d> &, std::false_type>, QtPrivate::TypeAndForceComplete<vector<Point2d> &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<cv::Mat, std::false_type>, QtPrivate::TypeAndForceComplete<bool, std::false_type>, QtPrivate::TypeAndForceComplete<cv::Mat, std::false_type>, QtPrivate::TypeAndForceComplete<cv::Mat, std::false_type>, QtPrivate::TypeAndForceComplete<cv::Mat, std::false_type>, QtPrivate::TypeAndForceComplete<bool, std::false_type>, QtPrivate::TypeAndForceComplete<cv::Mat, std::false_type>, QtPrivate::TypeAndForceComplete<cv::Mat, std::false_type>, QtPrivate::TypeAndForceComplete<cv::Mat, std::false_type>, QtPrivate::TypeAndForceComplete<cv::Mat, std::false_type>, QtPrivate::TypeAndForceComplete<double, std::false_type>, QtPrivate::TypeAndForceComplete<double, std::false_type>, QtPrivate::TypeAndForceComplete<Eigen::Matrix<double,4,4>, std::false_type>, QtPrivate::TypeAndForceComplete<std::string, std::false_type>, QtPrivate::TypeAndForceComplete<TimedStatePath, std::false_type>, QtPrivate::TypeAndForceComplete<Device::Ptr, std::false_type>, QtPrivate::TypeAndForceComplete<State, std::false_type>, QtPrivate::TypeAndForceComplete<Q, std::false_type>, QtPrivate::TypeAndForceComplete<Q, std::false_type>, QtPrivate::TypeAndForceComplete<Q, std::false_type>, QtPrivate::TypeAndForceComplete<Q, std::false_type>, QtPrivate::TypeAndForceComplete<Q, std::false_type>, QtPrivate::TypeAndForceComplete<Q, std::false_type>, QtPrivate::TypeAndForceComplete<Q, std::false_type>, QtPrivate::TypeAndForceComplete<double, std::false_type>, QtPrivate::TypeAndForceComplete<TimedStatePath, std::false_type>, QtPrivate::TypeAndForceComplete<Device::Ptr, std::false_type>, QtPrivate::TypeAndForceComplete<State, std::false_type>, QtPrivate::TypeAndForceComplete<Q, std::false_type>, QtPrivate::TypeAndForceComplete<Q, std::false_type>, QtPrivate::TypeAndForceComplete<Q, std::false_type>, QtPrivate::TypeAndForceComplete<Q, std::false_type>, QtPrivate::TypeAndForceComplete<Q, std::false_type>, QtPrivate::TypeAndForceComplete<Q, std::false_type>, QtPrivate::TypeAndForceComplete<Q, std::false_type>, QtPrivate::TypeAndForceComplete<double, std::false_type>, QtPrivate::TypeAndForceComplete<TimedStatePath, std::false_type>, QtPrivate::TypeAndForceComplete<Device::Ptr, std::false_type>, QtPrivate::TypeAndForceComplete<State, std::false_type>, QtPrivate::TypeAndForceComplete<InterpolatorTrajectory<Q>, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<std::string, std::false_type>, QtPrivate::TypeAndForceComplete<vector<Q>, std::false_type>, QtPrivate::TypeAndForceComplete<vector<double>, std::false_type>
 
 
 >,
@@ -371,13 +379,13 @@ int SamplePlugin::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 38)
+        if (_id < 39)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 38;
+        _id -= 39;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 38)
+        if (_id < 39)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 38;
+        _id -= 39;
     }
     return _id;
 }
