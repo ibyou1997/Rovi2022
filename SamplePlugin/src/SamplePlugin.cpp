@@ -1328,6 +1328,10 @@ cv::Rect SamplePlugin::autocrop(cv::Mat &src)
 }
 
 // ############################## Planing ################################################
+#include <chrono>
+#include <algorithm>
+using namespace std::chrono;
+
 
 TimedStatePath SamplePlugin::linInterp(Device::Ptr device, State state, Q from, Q passing1, Q passing2, Q passing3, Q passing4, Q passing5, Q to, double duration) //
 {
@@ -1443,9 +1447,7 @@ TimedStatePath SamplePlugin::InterpParabolic(Device::Ptr device, State state, Q 
 
     return res_para;
 }
-#include <chrono>
-#include <algorithm>
-using namespace std::chrono;
+
 
 void SamplePlugin::ExecutePointTopointPlanner()
 {
